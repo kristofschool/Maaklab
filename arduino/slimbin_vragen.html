@@ -259,8 +259,7 @@
         document.getElementById('progress-fill').style.width = progress + "%";
     }
     function verzendResultaatNaarGoogle(naam, score, totaal, fiche) {
-    const scriptURL = "https://script.google.com/a/macros/sjsp.be/s/AKfycbwA_fLf5zfHaklcqeF63g0y2MR0NwuqIYR58eWuku0x01Q5WyEaJKGXmYGj-gSQKOYEnA/exec";
-
+    const scriptURL = "//script.google.com/macros/s/AKfycbx9m2wvMhhduR-L2VFgSXqOdoCV2OPt5iKgXHVRs7ZRTOZwPl3zifiHrKip5XUtVRPwhQ/exec";
     fetch(scriptURL, {
         method: 'POST',
         // We sturen de data als tekst omdat Google Scripts geen directe JSON-headers accepteert vanaf andere domeinen
