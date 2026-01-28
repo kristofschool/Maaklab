@@ -274,19 +274,18 @@
     .catch(error => console.error('Fout bij verzenden:', error));
 }
     function showResult() {
-        document.getElementById('screen-quiz').classList.remove('active');
-        document.getElementById('screen-result').classList.add('active');
-        const name = document.getElementById('user-name').value;
-        const percentage = Math.round((score / currentFilteredQuestions.length) * 100);
-        
-        document.getElementById('result-text').innerHTML = 
-            `<strong>${name}</strong>, je hebt de quiz voltooid!<br><br>` +
-            `Score: ${score} van de ${currentFilteredQuestions.length}<br>` +
-            `Percentage: ${percentage}%`;
+    const name = document.getElementById('user-name').value;
+    const totalQuestions = currentFilteredQuestions.length; // Definieer dit hier
+    const selectedFiche = document.getElementById('fiche-select').value; // Definieer dit hier
+    const percentage = Math.round((score / totalQuestions) * 100);
+    
+    document.getElementById('result-text').innerHTML = 
+        `<strong>${name}</strong>, je score: ${score}/${totalQuestions}`;
 
-        // HIER WORDT DE DATA VERZONDEN
+    // Stuur de juiste variabelen door
     verzendResultaatNaarGoogle(name, score, totalQuestions, selectedFiche);
-    }
+}
+    
 </script>
 
 </body>
