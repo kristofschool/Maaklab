@@ -260,7 +260,22 @@
         const progress = (currentQuestionIndex / currentFilteredQuestions.length) * 100;
         document.getElementById('progress-fill').style.width = progress + "%";
     }
+    function verzendResultaatNaarGoogle(naam, score, totaal, fiche) {
+    const scriptURL = "https://script.google.com/a/macros/sjsp.be/s/AKfycbwA_fLf5zfHaklcqeF63g0y2MR0NwuqIYR58eWuku0x01Q5WyEaJKGXmYGj-gSQKOYEnA/exec";
 
+    fetch(scriptURL, {
+        method: 'POST',
+        // We sturen de data als tekst omdat Google Scripts geen directe JSON-headers accepteert vanaf andere domeinen
+        body: JSON.stringify({
+            "naam": naam,
+            "score": score,
+            "totaal": totaal,
+            "fiche": fiche
+        })
+    })
+    .then(response => console.log('Data verzonden!'))
+    .catch(error => console.error('Fout bij verzenden:', error));
+}
     function showResult() {
         document.getElementById('screen-quiz').classList.remove('active');
         document.getElementById('screen-result').classList.add('active');
@@ -271,6 +286,9 @@
             `<strong>${name}</strong>, je hebt de quiz voltooid!<br><br>` +
             `Score: ${score} van de ${currentFilteredQuestions.length}<br>` +
             `Percentage: ${percentage}%`;
+
+        // HIER WORDT DE DATA VERZONDEN
+    verzendResultaatNaarGoogle(name, score, totalQuestions, selectedFiche);
     }
 </script>
 
