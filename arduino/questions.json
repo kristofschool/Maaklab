@@ -50,7 +50,6 @@
   { "q": "Waarom gebruik je 'if(Serial.available())' bij kalibratie?", "options": ["Om te kijken of de gebruiker een toets heeft ingedrukt", "Om de sensor fysiek te activeren voor een nieuwe meting", "Om te controleren of de USB-kabel nog steeds vastzit", "Om data met hoge snelheid naar de computer te sturen"], "correct": 0, "level": 4, "fiche": 1 },
   { "q": "Wat is het gevaar van 'scale.tare()' IN de void loop()?", "options": ["De weegschaal blijft zichzelf op nul zetten", "De sensor gaat door de herhaling fysiek kapot", "De uitvoering van de code wordt onbeheersbaar snel", "De baudrate van de seriële poort zal crasht"], "correct": 0, "level": 5, "fiche": 1 },
   { "q": "In je verslag staat R² = 0.999. Wat zegt dit over je onderzoek?", "options": ["De metingen zijn zeer consistent lineair", "Je hebt een grote rekenfout gemaakt in de kalibratie", "De weegschaal is op dit moment niet goed gekalibreerd", "Er is sprake van veel elektromagnetische ruis"], "correct": 0, "level": 5, "fiche": 1 }
-[
   { 
     "q": "Wat gebeurt er als je vergeet '#include <HX711.h>' bovenaan je code te zetten?", 
     "options": [
@@ -152,4 +151,4 @@
     "correct": 0, "level": 3, "fiche": 0 
   }
 ]
-]
+
