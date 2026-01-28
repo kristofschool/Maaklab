@@ -273,17 +273,32 @@
     .then(response => console.log('Data verzonden!'))
     .catch(error => console.error('Fout bij verzenden:', error));
 }
-    function showResult() {
-    const name = document.getElementById('user-name').value;
-    const totalQuestions = currentFilteredQuestions.length; // Definieer dit hier
-    const selectedFiche = document.getElementById('fiche-select').value; // Definieer dit hier
-    const percentage = Math.round((score / totalQuestions) * 100);
-    
-    document.getElementById('result-text').innerHTML = 
-        `<strong>${name}</strong>, je score: ${score}/${totalQuestions}`;
+   function showResult() {
+    try {
+        const name = document.getElementById('user-name').value;
+        const totalQuestions = currentFilteredQuestions.length;
+        const selectedFiche = document.getElementById('fiche-select').value;
+        const percentage = Math.round((score / totalQuestions) * 100);
+        
+        // Update de tekst op het scherm
+        document.getElementById('result-text').innerHTML = 
+            `<strong>${name}</strong>, je hebt de quiz voltooid!<br><br>` +
+            `Score: ${score} van de ${totalQuestions}<br>` +
+            `Percentage: ${percentage}%`;
 
-    // Stuur de juiste variabelen door
-    verzendResultaatNaarGoogle(name, score, totalQuestions, selectedFiche);
+        // Wissel van scherm
+        document.getElementById('screen-quiz').classList.remove('active');
+        document.getElementById('screen-result').classList.add('active');
+
+        // Stuur data naar Google (we wachten niet op antwoord, zodat de gebruiker door kan)
+        verzendResultaatNaarGoogle(name, score, totalQuestions, selectedFiche);
+        
+    } catch (e) {
+        console.error("Fout in showResult:", e);
+        // Zorg dat de leerling in ieder geval zijn resultaat ziet, zelfs bij een bug
+        document.getElementById('screen-quiz').classList.remove('active');
+        document.getElementById('screen-result').classList.add('active');
+    }
 }
     
 </script>
