@@ -136,11 +136,6 @@
     </div>
 </div>
 
-
-
-[Image of Arduino Nano pinout diagram]
-
-
 <script>
     let questionBank = [];
     let currentFilteredQuestions = [];
@@ -187,6 +182,9 @@
             alert("Geen vragen gevonden voor deze fiche.");
             return;
         }
+
+        // 3. VOEG DIT TOE: Pak alleen de eerste 10 vragen van de geschudde lijst
+        currentFilteredQuestions = currentFilteredQuestions.slice(0, 10);
 
         document.getElementById('screen-start').classList.remove('active');
         document.getElementById('screen-quiz').classList.add('active');
