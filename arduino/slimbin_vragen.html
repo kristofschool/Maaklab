@@ -107,7 +107,7 @@
 
 <div id="quiz-container">
     <div id="screen-start" class="screen active">
-        <h1>Arduino Quizz</h1>
+        <h1>Arduino Quizzz</h1>
         <p>Voer je naam in en kies een fiche om te starten:</p>
         <input type="text" id="user-name" placeholder="Je naam...">
         <br>
@@ -259,7 +259,7 @@
         document.getElementById('progress-fill').style.width = progress + "%";
     }
     function verzendResultaatNaarGoogle(naam, score, totaal, fiche) {
-    const scriptURL = "https://script.google.com/macros/s/AKfycbxgp5avoxk8D1cTCzarRMnyU6ETW6gpQWY22LwUX1NYEcwYfJg-xX00OtEH-bEV1KY2BA/exec";
+    const scriptURL = "https://script.google.com/macros/s/AKfycbyPq8NOpiXXI8Boh7XJQvA-S8moUClbgvvfERTHNm33bWzZ2h5mJubQHNtJGoyXQvbGeQ/exec";
     fetch(scriptURL, {
         method: 'POST',
         // We sturen de data als tekst omdat Google Scripts geen directe JSON-headers accepteert vanaf andere domeinen
