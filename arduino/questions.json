@@ -26,13 +26,12 @@
   { "q": "Wat is 'hysteresis'?", "options": ["Verschil in meting bij toenemend vs afnemend gewicht", "De tijd die de sensor nodig heeft om volledig op te warmen", "De kleurcode van de weerstand op de HX711 module", "Een type fatale foutmelding bij het uploaden van code"], "correct": 0, "level": 4, "fiche": 0 },
   { "q": "Je ziet 'nan' in je seriële monitor. Wat betekent dit?", "options": ["Not a Number (fout in berekening of verbinding)", "De sensor is te warm geworden voor een betrouwbare meting", "Het gewicht op de loadcell is minder dan 0 gram", "De batterijspanning van de Arduino is bijna op"], "correct": 0, "level": 5, "fiche": 0 },
   { "q": "Waarom is 'long' 32-bits op een Arduino Nano?", "options": ["Om getallen tot +/- 2 miljard te kunnen opslaan", "Omdat de ATmega328P processor een 32-bits architectuur heeft", "Om getallen met veel decimalen nauwkeurig op te slaan", "Dat is de standaard lengte van een tekstveld in C++"], "correct": 0, "level": 5, "fiche": 0 },
-  { "q": "Hoeveel combinaties kan een 24-bit ADC maken?", "options": ["16.777.216", "1024 (standaard voor 10-bit systemen)", "65.536 (de limiet voor een 16-bit integer)", "256 (het maximale bereik van een enkele byte)"], "correct": 0, "level": 5, "fiche": 0 },
+  { "q": "Hoeveel combinaties kan een 24-bit ADC maken?", "options": ["16.777.216", "1024 (standaard for 10-bit systemen)", "65.536 (de limiet voor een 16-bit integer)", "256 (het maximale bereik van een enkele byte)"], "correct": 0, "level": 5, "fiche": 0 },
   { "q": "Wat gebeurt er als je SCK en DT fysiek omwisselt?", "options": ["De Arduino krijgt geen data (is_ready blijft false)", "De weegschaal weegt de waarden nu achterstevoren", "De gemeten waarden worden exact twee keer zo groot", "De seriële monitor toont onleesbare rommeltekens"], "correct": 0, "level": 5, "fiche": 0 },
   { "q": "De HX711 werkt op 80Hz of 10Hz. Wat betekent dit?", "options": ["Het aantal metingen per seconde", "De toonhoogte van de sensor tijdens actieve metingen", "De overdrachtssnelheid van de seriële USB-poort", "Het gemiddelde stroomverbruik van de HX711 module"], "correct": 0, "level": 5, "fiche": 0 },
   { "q": "Waarom is een stabiele 5V spanning cruciaal?", "options": ["Schommelingen in spanning zorgen voor meetfouten", "Anders werkt de seriële monitor van de IDE niet", "Om de ingebouwde status-LED feller te laten branden", "De Nano processor werkt alleen bij exact 5.000 Volt"], "correct": 0, "level": 5, "fiche": 0 },
   { "q": "Wat is de 'excitation voltage'?", "options": ["De spanning die de HX711 naar de loadcell stuurt", "De spanning die geleverd wordt door de USB-poort", "De output van de loadcell naar de versterker", "De blije emotie van de sensor bij een juiste meting"], "correct": 0, "level": 5, "fiche": 0 },
   { "q": "Hoe kun je de HX711 in 'power down' modus zetten?", "options": ["De SCK pin langdurig op HIGH zetten", "De USB-kabel fysiek uit de computer trekken", "Het commando Serial.end() in de code typen", "De rode VCC draad van de module loskoppelen"], "correct": 0, "level": 5, "fiche": 0 },
-
   { "q": "Wat doet 'scale.tare()' precies?", "options": ["Het huidige gewicht opslaan als het nulpunt", "De sensor volledig terugzetten naar de fabrieksinstellingen", "De kalibratiefactor automatisch berekenen op basis van ruwe data", "De stroomtoevoer naar de loadcell tijdelijk onderbreken"], "correct": 0, "level": 3, "fiche": 1 },
   { "q": "Als scale.read() 100.000 geeft voor 100g, wat is de factor?", "options": ["1000", "100 (op basis van een directe verhouding van 1:1)", "10.000 (rekening houdend met de 24-bit resolutie)", "1 (de standaardwaarde zonder enige schaling)"], "correct": 0, "level": 3, "fiche": 1 },
   { "q": "Welk datatype is het meest geschikt voor de kalibratiefactor?", "options": ["float", "int voor gehele getallen zonder cijfers achter de komma", "boolean voor een simpele aan/uit status van de sensor", "byte voor kleine getallen tussen de 0 en 255"], "correct": 0, "level": 3, "fiche": 1 },
@@ -49,106 +48,106 @@
   { "q": "Waarom tonen we vaak maar 1 decimaal (bijv. 10.1g)?", "options": ["Meer decimalen suggereren een schijnprecisie", "Omdat de seriële monitor technisch geen 2 decimalen kan tonen", "Om kostbare opslagruimte op het beeldscherm te besparen", "Dat is een vaste syntax-regel binnen de C++ programmeertaal"], "correct": 0, "level": 4, "fiche": 1 },
   { "q": "Waarom gebruik je 'if(Serial.available())' bij kalibratie?", "options": ["Om te kijken of de gebruiker een toets heeft ingedrukt", "Om de sensor fysiek te activeren voor een nieuwe meting", "Om te controleren of de USB-kabel nog steeds vastzit", "Om data met hoge snelheid naar de computer te sturen"], "correct": 0, "level": 4, "fiche": 1 },
   { "q": "Wat is het gevaar van 'scale.tare()' IN de void loop()?", "options": ["De weegschaal blijft zichzelf op nul zetten", "De sensor gaat door de herhaling fysiek kapot", "De uitvoering van de code wordt onbeheersbaar snel", "De baudrate van de seriële poort zal crasht"], "correct": 0, "level": 5, "fiche": 1 },
-  { "q": "In je verslag staat R² = 0.999. Wat zegt dit over je onderzoek?", "options": ["De metingen zijn zeer consistent lineair", "Je hebt een grote rekenfout gemaakt in de kalibratie", "De weegschaal is op dit moment niet goed gekalibreerd", "Er is sprake van veel elektromagnetische ruis"], "correct": 0, "level": 5, "fiche": 1 }
-  { 
-    "q": "Wat gebeurt er als je vergeet '#include <HX711.h>' bovenaan je code te zetten?", 
+  { "q": "In je verslag staat R² = 0.999. Wat zegt dit over je onderzoek?", "options": ["De metingen zijn zeer consistent lineair", "Je hebt een grote rekenfout gemaakt in de kalibratie", "De weegschaal is op dit moment niet goed gekalibreerd", "Er is sprake van veel elektromagnetische ruis"], "correct": 0, "level": 5, "fiche": 1 },
+  {  
+    "q": "Wat gebeurt er als je vergeet '#include <HX711.h>' bovenaan je code te zetten?",  
     "options": [
-        "De compiler geeft de foutmelding 'HX711 does not name a type'", 
-        "De code uploadt wel, maar de schaal geeft constant '0' aan", 
-        "De Arduino IDE kiest automatisch de standaard 'Weight.h' library", 
+        "De compiler geeft de foutmelding 'HX711 does not name a type'",  
+        "De code uploadt wel, maar de schaal geeft constant '0' aan",  
+        "De Arduino IDE kiest automatisch de standaard 'Weight.h' library",  
         "De seriële monitor opent niet omdat het communicatie-protocol ontbreekt"
-    ], 
-    "correct": 0, "level": 2, "fiche": 0 
+    ],  
+    "correct": 0, "level": 2, "fiche": 0  
   },
-  { 
-    "q": "Je krijgt de foutmelding 'expected ';' before '}' token'. Wat is de meest waarschijnlijke oorzaak?", 
+  {  
+    "q": "Je krijgt de foutmelding 'expected ';' before '}' token'. Wat is de meest waarschijnlijke oorzaak?",  
     "options": [
-        "Je bent een puntkomma vergeten aan het einde van de regel boven het accolade-sluiten", 
-        "Je hebt de verkeerde COM-poort geselecteerd in het 'Hulpmiddelen' menu", 
-        "De variabele 'scale' mag geen puntkomma bevatten tijdens de declaratie", 
+        "Je bent een puntkomma vergeten aan het einde van de regel boven het accolade-sluiten",  
+        "Je hebt de verkeerde COM-poort geselecteerd in het 'Hulpmiddelen' menu",  
+        "De variabele 'scale' mag geen puntkomma bevatten tijdens de declaratie",  
         "Je hebt per ongeluk een puntkomma gezet achter de 'void loop()' regel"
-    ], 
-    "correct": 0, "level": 2, "fiche": 0 
+    ],  
+    "correct": 0, "level": 2, "fiche": 0  
   },
-  { 
-    "q": "Wat is het gevolg van de fout: 'Serial.print(Gewicht)' terwijl je variabele 'gewicht' heet?", 
+  {  
+    "q": "Wat is het gevolg van de fout: 'Serial.print(Gewicht)' terwijl je variabele 'gewicht' heet?",  
     "options": [
-        "De foutmelding 'Gewicht was not declared in this scope' verschijnt", 
-        "De code werkt, maar de seriële monitor print alleen een hoofdletter 'G'", 
-        "De Arduino maakt automatisch een nieuwe variabele aan met de waarde 0", 
+        "De foutmelding 'Gewicht was not declared in this scope' verschijnt",  
+        "De code werkt, maar de seriële monitor print alleen een hoofdletter 'G'",  
+        "De Arduino maakt automatisch een nieuwe variabele aan met de waarde 0",  
         "De compiler negeert het verschil en corrigeert de schrijffout tijdens het uploaden"
-    ], 
-    "correct": 0, "level": 2, "fiche": 0 
+    ],  
+    "correct": 0, "level": 2, "fiche": 0  
   },
-  { 
-    "q": "Waarom is een 'delay(5000)' in de loop problematisch voor een weegschaal?", 
+  {  
+    "q": "Waarom is een 'delay(5000)' in de loop problematisch voor een weegschaal?",  
     "options": [
-        "De weegschaal reageert slechts één keer per 5 seconden op gewichtsveranderingen", 
-        "De HX711 chip verliest zijn kalibratie als deze te lang moet wachten", 
-        "De 'is_ready()' check zal na 5 seconden altijd 'false' teruggeven", 
+        "De weegschaal reageert slechts één keer per 5 seconden op gewichtsveranderingen",  
+        "De HX711 chip verliest zijn kalibratie als deze te lang moet wachten",  
+        "De 'is_ready()' check zal na 5 seconden altijd 'false' teruggeven",  
         "De seriële buffer loopt over, waardoor de Arduino Nano automatisch reset"
-    ], 
-    "correct": 0, "level": 3, "fiche": 0 
+    ],  
+    "correct": 0, "level": 3, "fiche": 0  
   },
-  { 
-    "q": "De seriële monitor toont onleesbare 'wartaal' (vreemde symbolen). Wat is de oorzaak?", 
+  {  
+    "q": "De seriële monitor toont onleesbare 'wartaal' (vreemde symbolen). Wat is de oorzaak?",  
     "options": [
-        "De Baudrate in 'Serial.begin()' verschilt van de instelling in de monitor", 
-        "De HX711 stuurt data in 24-bit binair formaat dat de monitor niet kan lezen", 
-        "De 'DT' en 'SCK' draden zitten fysiek los in het breadboard", 
+        "De Baudrate in 'Serial.begin()' verschilt van de instelling in de monitor",  
+        "De HX711 stuurt data in 24-bit binair formaat dat de monitor niet kan lezen",  
+        "De 'DT' en 'SCK' draden zitten fysiek los in het breadboard",  
         "Er is te veel elektromagnetische ruis van de USB-kabel"
-    ], 
-    "correct": 0, "level": 3, "fiche": 0 
+    ],  
+    "correct": 0, "level": 3, "fiche": 0  
   },
-  { 
-    "q": "Wat gebeurt er als je de 'scale.begin(DT, SCK)' in de loop() zet in plaats van de setup()?", 
+  {  
+    "q": "Wat gebeurt er als je de 'scale.begin(DT, SCK)' in de loop() zet in plaats van de setup()?",  
     "options": [
-        "De pinnen worden telkens opnieuw geïnitialiseerd, wat de meting vertraagt", 
-        "De Arduino Nano zal na enkele seconden vastlopen door een geheugenfout", 
-        "Het gewicht wordt elke keer vermenigvuldigd met het aantal uitgevoerde lussen", 
+        "De pinnen worden telkens opnieuw geïnitialiseerd, wat de meting vertraagt",  
+        "De Arduino Nano zal na enkele seconden vastlopen door een geheugenfout",  
+        "Het gewicht wordt elke keer vermenigvuldigd met het aantal uitgevoerde lussen",  
         "Niets, het maakt in C++ niet uit waar je hardware-pinnen definieert"
-    ], 
-    "correct": 0, "level": 3, "fiche": 0 
+    ],  
+    "correct": 0, "level": 3, "fiche": 0  
   },
-  { 
-    "q": "Je ziet de foutmelding 'Error compiling for board Arduino Nano'. Wat moet je als eerste doen?", 
+  {  
+    "q": "Je ziet de foutmelding 'Error compiling for board Arduino Nano'. Wat moet je als eerste doen?",  
     "options": [
-        "De foutmeldingen naar boven scrollen om de specifieke code-fout te vinden", 
-        "De Arduino Nano loskoppelen en de HX711 chip vervangen", 
-        "De USB-kabel omdraaien om de dataoverdracht te verbeteren", 
+        "De foutmeldingen naar boven scrollen om de specifieke code-fout te vinden",  
+        "De Arduino Nano loskoppelen en de HX711 chip vervangen",  
+        "De USB-kabel omdraaien om de dataoverdracht te verbeteren",  
         "Een nieuwe library downloaden omdat de huidige corrupt is"
-    ], 
-    "correct": 1, "level": 2, "fiche": 0 
+    ],  
+    "correct": 0, "level": 2, "fiche": 0  
   },
-  { 
-    "q": "Wat is het probleem met de code: 'if (scale.is_ready()); { Serial.read(); }'?", 
+  {  
+    "q": "Wat is het probleem met de code: 'if (scale.is_ready()); { Serial.read(); }'?",  
     "options": [
-        "De puntkomma achter de 'if' zorgt ervoor dat de code daarna altijd wordt uitgevoerd", 
-        "De 'is_ready' functie mag nooit binnen een 'if' statement gebruikt worden", 
-        "De accolades '{}' zijn overbodig als je 'Serial.read' gebruikt", 
+        "De puntkomma achter de 'if' zorgt ervoor dat de code daarna altijd wordt uitgevoerd",  
+        "De 'is_ready' functie mag nooit binnen een 'if' statement gebruikt worden",  
+        "De accolades '{}' zijn overbodig als je 'Serial.read' gebruikt",  
         "Er is geen probleem, dit is de standaard manier om sensoren uit te lezen"
-    ], 
-    "correct": 0, "level": 3, "fiche": 0 
+    ],  
+    "correct": 0, "level": 3, "fiche": 0  
   },
-  { 
-    "q": "De IDE zegt 'Serial was not declared in this scope'. Wat ben je vergeten?", 
+  {  
+    "q": "De IDE zegt 'Serial was not declared in this scope'. Wat ben je vergeten?",  
     "options": [
-        "Niets, je hebt waarschijnlijk een typefout gemaakt in het woord 'Serial'", 
-        "Je bent vergeten de seriële monitor handmatig aan te zetten met een knop", 
-        "Je moet eerst de library '#include <Serial.h>' bovenaan toevoegen", 
+        "Niets, je hebt waarschijnlijk een typefout gemaakt in het woord 'Serial'",  
+        "Je bent vergeten de seriële monitor handmatig aan te zetten met een knop",  
+        "Je moet eerst de library '#include <Serial.h>' bovenaan toevoegen",  
         "De Arduino Nano ondersteunt geen seriële communicatie zonder extra hardware"
-    ], 
-    "correct": 0, "level": 2, "fiche": 0 
+    ],  
+    "correct": 0, "level": 2, "fiche": 0  
   },
-  { 
-    "q": "Waarom geeft 'scale.get_units()' soms '0.00' aan, zelfs als er een gewicht op ligt?", 
+  {  
+    "q": "Waarom geeft 'scale.get_units()' soms '0.00' aan, zelfs als er een gewicht op ligt?",  
     "options": [
-        "De kalibratiefactor staat nog op de standaardwaarde (1) of is niet ingesteld", 
-        "De 'scale.tare()' functie is per ongeluk verwijderd uit de setup()", 
-        "De voeding (VCC) van de HX711 levert te veel stroom aan de loadcell", 
+        "De kalibratiefactor staat nog op de standaardwaarde (1) of is niet ingesteld",  
+        "De 'scale.tare()' functie is per ongeluk verwijderd uit de setup()",  
+        "De voeding (VCC) van de HX711 levert te veel stroom aan de loadcell",  
         "De seriële monitor is ingesteld op de verkeerde baudrate"
-    ], 
-    "correct": 0, "level": 3, "fiche": 0 
+    ],  
+    "correct": 0, "level": 3, "fiche": 0  
   }
 ]
 
